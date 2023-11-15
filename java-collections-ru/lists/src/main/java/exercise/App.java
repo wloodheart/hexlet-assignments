@@ -1,6 +1,7 @@
 package exercise;
 
-import java.util.*;
+
+import java.util.ArrayList;
 
 // BEGIN
 class App {
