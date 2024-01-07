@@ -1,10 +1,8 @@
 package exercise.dto.users;
 
 import exercise.model.User;
-import java.util.List;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
+import java.util.List;
 
 // BEGIN
 public record UsersPage(List<User> USERS, String header) {
