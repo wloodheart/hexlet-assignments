@@ -3,16 +3,9 @@ import org.gradle.api.tasks.testing.logging.TestLogEvent
 import com.github.benmanes.gradle.versions.updates.DependencyUpdatesTask
 
 plugins {
-    id("java-library")
     id("com.github.ben-manes.versions") version "0.48.0"
     application
-//    id("io.freefair.lombok") version "8.1.0"
-}
-
-java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
-    }
+    id("io.freefair.lombok") version "8.1.0"
 }
 
 application {
@@ -27,24 +20,15 @@ repositories {
 }
 
 dependencies {
-//    implementation("io.javalin:javalin:5.6.1")
+    implementation("io.javalin:javalin:5.6.1")
 
     // BEGIN
     implementation("gg.jte:jte:3.1.6")
-//    implementation("gg.jte:jte-kotlin:3.1.6")
-    implementation("io.javalin:javalin:5.6.3")
-//    compileOnly("org.projectlombok:lombok:1.18.30")
     implementation("io.javalin:javalin-rendering:5.6.3")
-    implementation("io.javalin:javalin-bundle:5.6.3")
-
-    compileOnly("org.projectlombok:lombok:1.18.30")
     annotationProcessor("org.projectlombok:lombok:1.18.30")
-
-    testCompileOnly("org.projectlombok:lombok:1.18.30")
-    testAnnotationProcessor("org.projectlombok:lombok:1.18.30")
     // END
 
-//    implementation("io.javalin:javalin-bundle:5.6.2")
+    implementation("io.javalin:javalin-bundle:5.6.2")
     implementation("org.slf4j:slf4j-simple:2.0.7")
     implementation("net.datafaker:datafaker:2.0.1")
     implementation("com.fasterxml.jackson.core:jackson-databind:2.15.0")
